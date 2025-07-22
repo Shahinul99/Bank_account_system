@@ -31,9 +31,9 @@
                     </div>
 
                     <div class="divider"></div>
-                    
+
                     <!-- add money from  -->
-                    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div class="card-body">
                             <fieldset class="fieldset">
                                 <label class="label text-lg">Amount</label>
@@ -49,14 +49,16 @@
 
                     <div class="divider"></div>
                     <!-- cash out form start here -->
-                    
-                    <div id="cash-out-form" class=" hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+
+                    <div id="cash-out-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div class="card-body">
                             <fieldset class="fieldset">
                                 <label class="label">Amount</label>
-                                <input id="input-cash-out" type="text" class="input bg-slate-200" placeholder="amount" />
+                                <input id="input-cash-out" type="text" class="input bg-slate-200"
+                                    placeholder="amount" />
                                 <label class="label">Pin</label>
-                                <input id="input-cash-out-pin" type="password" class="input bg-slate-200" placeholder="Pin" />
+                                <input id="input-cash-out-pin" type="password" class="input bg-slate-200"
+                                    placeholder="Pin" />
                                 <div><a class="link link-hover">Forgot password?</a></div>
                                 <button id="btn-cash-out" class="btn btn-warning mt-4 rounded-xl">Cash Out</button>
                             </fieldset>
@@ -68,7 +70,10 @@
 
     </main>
     <footer></footer>
+    <!-- <script src="function2.js"></script> -->
     <script src="/addMoney.js"></script>
+    <script src="/function.js"></script>
+    <script src="cash-out.js"></script>
 </body>
 
 </html>
