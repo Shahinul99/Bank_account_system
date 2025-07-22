@@ -14,26 +14,27 @@
     <main class="flex justify-center">
         <div class="mockup-phone ">
             <div class="mockup-phone-camera"></div>
-            <div class="mockup-phone-display flex items-center justify-center bg-white text-black p-0">
-                <div class="flex flex-col items-center justify-center gap-y-4 w-full">
-
-                    <div class="stats shadow m-0 p-0">
+            <div class="mockup-phone-display flex items-center justify-center bg-white text-black">
+                <div class="flex flex-col items-center justify-center gap-y-4">
+                    <div class="stats shadow ">
                         <!-- first step -->
                         <div class="stat bg-slate-200">
-                            <div id="account-balance" class="stat-value">400</div>
-                            <div class="stat-desc text-lg ">Available balance</div>
+                            <div id="account-balance" class="stat-value ">40000</div>
+                            <div class="stat-desc text-2xl ">Available balance</div>
                         </div>
                     </div>
                     <!-- input section -->
                     <div class="flex gap-2 ">
-                        <button class="btn btn-lg bg-yellow-100">Add money</button>
-                        <button class="btn btn-lg bg-yellow-100">Cash out</button>
+                        <button id="show-add-money-form" class="btn btn-lg bg-yellow-100 rounded-md">Add money</button>
+                        <button id="show-cash-out-form" class="btn btn-lg bg-yellow-100 rounded-md">Cash out</button>
+                        <button id="show-transaction-history"
+                            class="btn btn-lg bg-yellow-100 rounded-md">Transactions</button>
                     </div>
 
                     <div class="divider"></div>
 
                     <!-- add money from  -->
-                    <div class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="add-money-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div class="card-body">
                             <fieldset class="fieldset">
                                 <label class="label text-lg">Amount</label>
@@ -42,38 +43,46 @@
                                 <label class="label text-lg">Pin</label>
                                 <input id="input-pin-number" type="password" class="input bg-slate-200"
                                     placeholder="Pin" />
-                                <button id="btn-add-money" class="btn btn-warning mt-4 rounded-xl">Add Money</button>
+                                <button id="btn-add-money" class="btn btn-warning mt-4 rounded-xl text-lg">Add
+                                    Money</button>
                             </fieldset>
                         </div>
                     </div>
-
-                    <div class="divider"></div>
+                    <!-- 
+                    <div class="divider"></div> -->
                     <!-- cash out form start here -->
 
-                    <div id="cash-out-form" class=" card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
+                    <div id="cash-out-form" class="hidden card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
                         <div class="card-body">
                             <fieldset class="fieldset">
-                                <label class="label">Amount</label>
-                                <input id="input-cash-out" type="text" class="input bg-slate-200"
+                                <label class="label text-lg">Amount</label>
+                                <input id="input-cash-out" type="text" class="input  bg-slate-200"
                                     placeholder="amount" />
-                                <label class="label">Pin</label>
+                                <label class="label text-lg">Pin</label>
                                 <input id="input-cash-out-pin" type="password" class="input bg-slate-200"
                                     placeholder="Pin" />
-                                <div><a class="link link-hover">Forgot password?</a></div>
-                                <button id="btn-cash-out" class="btn btn-warning mt-4 rounded-xl">Cash Out</button>
+                                <button id="btn-cash-out" class="btn btn-warning mt-4 rounded-xl text-lg">Cash
+                                    Out</button>
                             </fieldset>
                         </div>
                     </div>
+                    <!-- transaction start here -->
+                    <div class="hidden" id="transaction-section">
+                        <h2 class="text-5xl text-center"> Transactions History</h2>
+                        <div class="space-y-2" id="transaction-container"></div>
+                    </div>
+
                 </div>
             </div>
         </div>
 
     </main>
     <footer></footer>
-    <!-- <script src="function2.js"></script> -->
-    <script src="/addMoney.js"></script>
+    <script src="features.js"></script>
     <script src="/function.js"></script>
+    <script src="function2.js"></script>
     <script src="cash-out.js"></script>
+    <script src="/addMoney.js"></script>
 </body>
 
 </html>
